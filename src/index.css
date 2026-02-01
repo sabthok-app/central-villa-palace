@@ -162,7 +162,7 @@
 
   /* Bento grid item styles */
   .bento-item {
-    @apply bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-500 group;
+    @apply bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-500;
   }
 
   .bento-item-content {
