@@ -120,7 +120,7 @@ const About = () => {
               chandelier tells a story of elegance.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you're planning a traditional Nepali wedding, an intimate
+              Whether you&apos;re planning a traditional Nepali wedding, an intimate
               reception, or a grand corporate event, our venue provides the
               perfect canvas for your celebrations.
             </p>

@@ -67,7 +67,7 @@ const Footer = () => {
               </span>
 
               <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
-                Let's Create <span className="text-gold italic">Magic</span>{" "}
+                Let&apos;s Create <span className="text-gold italic">Magic</span>{" "}
                 Together
               </h2>
 
