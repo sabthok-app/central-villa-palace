@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -105,10 +106,12 @@ const Services = () => {
               {/* Featured Image */}
               {service.featured && service.image && (
                 <div className="absolute inset-0">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-transparent" />
                 </div>

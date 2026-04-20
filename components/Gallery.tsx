@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { X } from "lucide-react";
@@ -48,10 +49,12 @@ const Gallery = () => {
               onClick={() => setActiveImage(img.src)}
               className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-elegant transition-all duration-500"
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
-                loading="lazy"
+                width={1400}
+                height={1000}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="w-full h-[260px] md:h-[320px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-maroon/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -73,12 +76,18 @@ const Gallery = () => {
           >
             <X className="h-6 w-6" />
           </button>
-          <img
-            src={activeImage}
-            alt="Gallery view"
-            className="max-w-full max-h-full object-contain rounded-lg"
+          <div
+            className="relative w-full max-w-6xl h-[85vh]"
             onClick={(e) => e.stopPropagation()}
-          />
+          >
+            <Image
+              src={activeImage}
+              alt="Gallery view"
+              fill
+              sizes="100vw"
+              className="object-contain rounded-lg"
+            />
+          </div>
         </div>
       )}
     </section>

@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Lamp, Columns, Crown, Star } from "lucide-react";
 
-const venueExterior = "/images/venue-exterior.jpg";
+const venueExterior = "/images/exterior-day.jpg";
 
 const hallFeatures = [
   {
@@ -38,10 +39,13 @@ const GrandHall = () => {
     <section id="hall" className="relative overflow-hidden">
       {/* Full-width Image Background */}
       <div className="relative h-screen max-h-[800px]">
-        <img
+        <Image
           src={venueExterior}
           alt="Central Villa Grand Hall"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-maroon/90 via-maroon/70 to-transparent" />
 

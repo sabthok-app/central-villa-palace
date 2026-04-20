@@ -75,9 +75,12 @@ const About = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-              <img
+              <Image
                 src={venueExterior}
                 alt="Central Villa Exterior"
+                width={1600}
+                height={1000}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-[500px] object-cover"
               />
               {/* Overlay gradient */}
