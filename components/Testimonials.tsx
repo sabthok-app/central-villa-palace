@@ -67,6 +67,7 @@ const TestimonialCard = ({
 const Testimonials = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const reversedTestimonials = [...testimonials].reverse();
 
   return (
     <section className="section-padding bg-ivory overflow-hidden" ref={ref}>
@@ -91,26 +92,20 @@ const Testimonials = () => {
         </motion.div>
       </div>
 
-      {/* Marquee Container */}
       <div className="relative">
-        {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-ivory to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-ivory to-transparent z-10 pointer-events-none" />
 
-        {/* First row - scrolling left */}
         <div className="flex animate-marquee mb-6">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+            <TestimonialCard key={`left-${index}-${testimonial.name}`} testimonial={testimonial} />
           ))}
         </div>
 
-        {/* Second row - scrolling right */}
         <div className="flex animate-marquee-reverse">
-          {[...testimonials.reverse(), ...testimonials].map(
-            (testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
-            )
-          )}
+          {[...reversedTestimonials, ...reversedTestimonials].map((testimonial, index) => (
+            <TestimonialCard key={`right-${index}-${testimonial.name}`} testimonial={testimonial} />
+          ))}
         </div>
       </div>
     </section>
