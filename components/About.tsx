@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Sparkles, Users, Camera, Award } from "lucide-react";
 
-const venueExterior = "/images/venue-exterior.jpg";
+const venueExterior = "/images/exterior-day.jpg";
 
 const features = [
   {
