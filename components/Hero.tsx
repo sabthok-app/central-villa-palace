@@ -35,7 +35,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-6 py-2 text-sm font-medium tracking-[0.3em] uppercase text-gold border border-gold/40 rounded-full backdrop-blur-sm">
-            Pokhara's Premier Event Venue
+            Pokhara&apos;s Premier Event Venue
           </span>
         </motion.div>
 
@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 max-w-5xl leading-tight"
         >
-          Celebrate Life's <br />
+          Celebrate Life&apos;s <br />
           <span className="text-gold italic">Grandest Moments</span>
         </motion.h1>
 

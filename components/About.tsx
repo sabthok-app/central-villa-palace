@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -74,9 +75,12 @@ const About = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-              <img
+              <Image
                 src={venueExterior}
                 alt="Central Villa Exterior"
+                width={1600}
+                height={1000}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-[500px] object-cover"
               />
               {/* Overlay gradient */}
@@ -120,7 +124,7 @@ const About = () => {
               chandelier tells a story of elegance.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you're planning a traditional Nepali wedding, an intimate
+              Whether you&apos;re planning a traditional Nepali wedding, an intimate
               reception, or a grand corporate event, our venue provides the
               perfect canvas for your celebrations.
             </p>
