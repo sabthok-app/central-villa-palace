@@ -5,8 +5,14 @@ import { useRef, useState } from "react";
 import { X } from "lucide-react";
 
 const images = [
-  { src: "/images/exterior-day.jpg", alt: "Central Villa exterior by day" },
   { src: "/images/exterior-night.jpg", alt: "Central Villa illuminated at night" },
+  { src: "/images/gallery-1.jpg", alt: "Grand neoclassical facade with columns" },
+  { src: "/images/gallery-2.jpg", alt: "Entrance portico with decorated mandap" },
+  { src: "/images/gallery-3.jpg", alt: "Bougainvillea framing the palace entrance" },
+  { src: "/images/gallery-4.jpg", alt: "Pink blossoms in front of the villa" },
+  { src: "/images/gallery-5.jpg", alt: "Front elevation with floral pathway" },
+  { src: "/images/gallery-6.jpg", alt: "White petunias and chandelier entrance" },
+  { src: "/images/exterior-day.jpg", alt: "Central Villa exterior by day" },
 ];
 
 const Gallery = () => {
