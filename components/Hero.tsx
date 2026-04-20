@@ -15,7 +15,7 @@ const Hero = () => {
           loop
           playsInline
           className="h-full w-full object-cover"
-          poster="/images/venue-poster.jpg"
+          poster="/images/exterior-night.jpg"
         >
           <source src="/videos/venue-video.mp4" type="video/mp4" />
         </video>
