@@ -38,13 +38,13 @@ const Gallery = () => {
           <div className="ornament-line w-32 mx-auto mt-6" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, index) => (
             <motion.button
               key={img.src}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.6, delay: Math.min(index, 5) * 0.08 }}
               onClick={() => setActiveImage(img.src)}
               className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-elegant transition-all duration-500"
             >
@@ -52,7 +52,7 @@ const Gallery = () => {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-[320px] md:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[260px] md:h-[320px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-maroon/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/60 rounded-2xl transition-colors" />
